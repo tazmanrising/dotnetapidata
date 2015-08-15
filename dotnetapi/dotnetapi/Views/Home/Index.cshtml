@@ -1,0 +1,79 @@
+﻿@model PagedList.IPagedList<dotnetapi.Data.Models.tblTips>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "Coordinators (delta dynamic)";
+}
+
+<div>test: @ViewBag.itemType</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount</div>
+        <div class="col-md-4">@ViewBag.TotalCount Total Records</div>
+        <div class="col-md-4"> <button type="button" class="btn btn-primary">Add</button>
+            @*@Html.ActionLink("Create New", "Create")*@
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+
+    @Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+</div>
+
+    @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+    {
+        <p>
+            Find by Title or?: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+            <input type="submit" value="Search" />
+        </p>
+    }
+    <table class="table">
+        <tr>
+            <th colspan="4">Sort By:</th>
+        </tr>
+        <tr>
+            <th>
+                @Html.ActionLink("Title", "Index", new { sortOrder = ViewBag.TitleSortParm, currentFilter = ViewBag.CurrentFilter })
+            </th>
+            <th>
+                Date Created
+            </th>
+            <th>
+                @Html.ActionLink("Created By", "Index", new { sortOrder = ViewBag.DateSortParm, currentFilter = ViewBag.CurrentFilter })
+            </th>
+            <th>Category</th>
+        </tr>
+
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td colspan="3">
+                    @Html.DisplayFor(modelItem => item.title)<br /><br />
+                    @Html.DisplayFor(modelItem => item.body)<br /><br />
+                    <button type="button" class="btn btn-default">Image</button><br/><br/>
+                    <button class="btn btn-success" onclick="location.href='@Url.Action("AddComment", "Home", new { id = item.id })';return false;">Add Comment</button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-warning">Edit</button>
+                    <button type="button" class="btn btn-danger">Delete</button>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+
+    </table>
+    <br />
+
+<div class="container-fluid">
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+
+    @Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+</div>

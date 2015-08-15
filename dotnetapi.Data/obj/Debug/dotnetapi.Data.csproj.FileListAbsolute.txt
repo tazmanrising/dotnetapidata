@@ -1,0 +1,10 @@
+C:\dev\doc-home-dotnet\dotnetapi.Data\bin\Debug\dotnetapi.Data.dll.config
+C:\dev\doc-home-dotnet\dotnetapi.Data\bin\Debug\dotnetapi.Data.dll
+C:\dev\doc-home-dotnet\dotnetapi.Data\bin\Debug\dotnetapi.Data.pdb
+C:\dev\doc-home-dotnet\dotnetapi.Data\bin\Debug\EntityFramework.dll
+C:\dev\doc-home-dotnet\dotnetapi.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\dev\doc-home-dotnet\dotnetapi.Data\bin\Debug\EntityFramework.xml
+C:\dev\doc-home-dotnet\dotnetapi.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\dev\doc-home-dotnet\dotnetapi.Data\obj\Debug\dotnetapi.Data.csprojResolveAssemblyReference.cache
+C:\dev\doc-home-dotnet\dotnetapi.Data\obj\Debug\dotnetapi.Data.dll
+C:\dev\doc-home-dotnet\dotnetapi.Data\obj\Debug\dotnetapi.Data.pdb
