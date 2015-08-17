@@ -19,7 +19,28 @@ namespace dotnetapi.Data.Models
         }
 
 
+        public List<tblTips> GetTips()
+        {
+            return new List<tblTips>
+            {
+                new tblTips () { body = "this is a news test" }
+            };
+        }
+
+
+        public List<tblComments> GetComments()
+        {
+            return new List<tblComments>
+            {
+                new tblComments () { id = 1, tblTipsId = 1, created = DateTime.Now, createdby = "tom", Comments = "this is a news test" }
+            };
+        }
+
+
+
     }
+
+
 
 
     public class Course

@@ -8,3 +8,13 @@ C:\dev\doc-home-dotnet\dotnetapi.Data\bin\Debug\EntityFramework.SqlServer.xml
 C:\dev\doc-home-dotnet\dotnetapi.Data\obj\Debug\dotnetapi.Data.csprojResolveAssemblyReference.cache
 C:\dev\doc-home-dotnet\dotnetapi.Data\obj\Debug\dotnetapi.Data.dll
 C:\dev\doc-home-dotnet\dotnetapi.Data\obj\Debug\dotnetapi.Data.pdb
+C:\Users\Thomas\Downloads\dotnetapidata-master\dotnetapi.Data\bin\Debug\dotnetapi.Data.dll.config
+C:\Users\Thomas\Downloads\dotnetapidata-master\dotnetapi.Data\bin\Debug\dotnetapi.Data.dll
+C:\Users\Thomas\Downloads\dotnetapidata-master\dotnetapi.Data\bin\Debug\dotnetapi.Data.pdb
+C:\Users\Thomas\Downloads\dotnetapidata-master\dotnetapi.Data\bin\Debug\EntityFramework.dll
+C:\Users\Thomas\Downloads\dotnetapidata-master\dotnetapi.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Thomas\Downloads\dotnetapidata-master\dotnetapi.Data\bin\Debug\EntityFramework.xml
+C:\Users\Thomas\Downloads\dotnetapidata-master\dotnetapi.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Thomas\Downloads\dotnetapidata-master\dotnetapi.Data\obj\Debug\dotnetapi.Data.csprojResolveAssemblyReference.cache
+C:\Users\Thomas\Downloads\dotnetapidata-master\dotnetapi.Data\obj\Debug\dotnetapi.Data.dll
+C:\Users\Thomas\Downloads\dotnetapidata-master\dotnetapi.Data\obj\Debug\dotnetapi.Data.pdb

@@ -33,9 +33,14 @@ namespace dotnetapi.Controllers
 
             ViewBag.CurrentFilter = searchString;
 
-            var tips = (from s in db.tblTips
-                       .Where(d => d.@group == 2)   // supervisor = 2  , coordinator = 5
+            var repo = new Repository();
+
+            var tips = (from s in repo.GetTips()
                         select s);
+
+            //var tips = (from s in db.tblTips
+            //           .Where(d => d.@group == 2)   // supervisor = 2  , coordinator = 5
+            //            select s);
 
 
             //Show the query 
@@ -129,13 +134,18 @@ namespace dotnetapi.Controllers
         public ActionResult GetComments(int id)
         {
 
-            var comments = (from c in db.tblComments
-                            .Where(d => d.tblTipsId == id)   // supervisor = 2  , coordinator = 5
-                            select c);
+            var repo = new Repository();
+            var comments = (from s in repo.GetComments()
+                        select s);
+
+            //var comments = (from c in db.tblComments
+            //                .Where(d => d.tblTipsId == id)   // supervisor = 2  , coordinator = 5
+            //                select c);
 
 
             return PartialView("GetComments", comments);
         }
+
 
 
 
